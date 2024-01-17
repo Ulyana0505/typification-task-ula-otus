@@ -38,10 +38,11 @@ type Order =
       fullfillmentDate: Date;
     };
 
-export const filterOnlyInitialAndInWorkOrder = (order: Order): FIXME => {
+export const filterOnlyInitialAndInWorkOrder = (order: Order): object | null => {
   if (order.state === "initial" || order.state === "inWork") {
     return order;
   }
 
   return null;
 };
+// DONE — ?correct?
