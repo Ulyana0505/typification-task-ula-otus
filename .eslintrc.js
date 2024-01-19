@@ -12,10 +12,7 @@ module.exports = {
     rules: {},
     overrides: [
         {
-            files: [
-                '.eslintrc.js',
-                'jest.config.js',
-            ],
+            files: ['.eslintrc.js', 'jest.config.js'],
             env: {
                 node: true, // Apply Node environment specifically for ESLint config
             },
