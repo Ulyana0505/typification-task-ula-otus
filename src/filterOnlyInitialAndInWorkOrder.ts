@@ -32,7 +32,7 @@ type Order =
 
 export const filterOnlyInitialAndInWorkOrder = (
     order: Order
-): object | null => {
+): Record<string, number | string | Date> | null => {
     if (order.state === 'initial' || order.state === 'inWork') {
         return order
     }
