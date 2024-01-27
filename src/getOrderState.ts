@@ -30,4 +30,7 @@ type Order =
           fullfillmentDate: Date
       }
 
-export const getOrderState = (order: Order): string => order.state
+export const getOrderState = (
+    order: Order
+): 'initial' | 'inWork' | 'buyingSupplies' | 'producing' | 'fullfilled' =>
+    order.state
