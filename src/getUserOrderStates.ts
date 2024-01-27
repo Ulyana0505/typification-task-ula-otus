@@ -8,8 +8,8 @@ const orderStates = [
 
 type OrderState = (typeof orderStates)[number]
 
-export const getUserOrderStates = (orderStates: OrderState[]): string[] => {
-    const filteredStates = [] as string[]
+export const getUserOrderStates = (orderStates: OrderState[]): OrderState[] => {
+    const filteredStates = [] as OrderState[]
     orderStates.forEach((element) => {
         if (element !== 'buyingSupplies' && element !== 'producing') {
             filteredStates.push(element)
