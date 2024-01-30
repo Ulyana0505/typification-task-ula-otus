@@ -8,9 +8,11 @@ const orderStates = [
 
 type OrderState = (typeof orderStates)[number]
 
-type FilteredState = "buyingSupplies" | "producing";
+type FilteredState = 'buyingSupplies' | 'producing'
 
-export const getUserOrderStates = (orderStates: OrderState[]): Array<Exclude<OrderState, FilteredState>> => {
+export const getUserOrderStates = (
+    orderStates: OrderState[]
+): Array<Exclude<OrderState, FilteredState>> => {
     const filteredStates = [] as Array<Exclude<OrderState, FilteredState>>
     orderStates.forEach((element) => {
         if (element !== 'buyingSupplies' && element !== 'producing') {

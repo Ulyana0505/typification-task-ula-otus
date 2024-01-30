@@ -30,7 +30,4 @@ type Order =
           fullfillmentDate: Date
       }
 
-export const getOrderState = (
-    order: Order
-): Order["state"] =>
-    order.state
+export const getOrderState = (order: Order): Order['state'] => order.state

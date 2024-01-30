@@ -32,7 +32,7 @@ type Order =
 
 export const filterOnlyInitialAndInWorkOrder = (
     order: Order
-): Extract<Order, { state: "initial" | "inWork" }> | null => {
+): Extract<Order, { state: 'initial' | 'inWork' }> | null => {
     if (order.state === 'initial' || order.state === 'inWork') {
         return order
     }
