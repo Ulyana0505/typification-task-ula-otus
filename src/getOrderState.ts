@@ -32,5 +32,5 @@ type Order =
 
 export const getOrderState = (
     order: Order
-): 'initial' | 'inWork' | 'buyingSupplies' | 'producing' | 'fullfilled' =>
+): Order["state"] =>
     order.state
